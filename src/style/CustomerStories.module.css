@@ -1,0 +1,64 @@
+.slider-visible {
+          transform: translateX(0);
+          opacity: 1;
+        }
+
+        .slider-slide-in-left {
+          animation: slideInLeft 700ms ease-out forwards;
+        }
+
+        .slider-slide-in-right {
+          animation: slideInRight 700ms ease-out forwards;
+        }
+
+        .slider-slide-out-left {
+          animation: slideOutLeft 700ms ease-out forwards;
+        }
+
+        .slider-slide-out-right {
+          animation: slideOutRight 700ms ease-out forwards;
+        }
+
+        @keyframes slideInLeft {
+          from {
+            transform: translateX(-100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        @keyframes slideInRight {
+          from {
+            transform: translateX(100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        @keyframes slideOutLeft {
+          from {
+            transform: translateX(0);
+            opacity: 1;
+          }
+          to {
+            transform: translateX(-100%);
+            opacity: 0;
+          }
+        }
+
+        @keyframes slideOutRight {
+          from {
+            transform: translateX(0);
+            opacity: 1;
+          }
+          to {
+            transform: translateX(100%);
+            opacity: 0;
+          }
+        }
