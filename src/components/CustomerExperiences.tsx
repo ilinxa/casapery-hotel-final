@@ -99,7 +99,7 @@ const CustomerExperiences = ( Experiences: CustomerExperiencesProps) => {
       {/* <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal-100/20 rounded-full transform -translate-x-48 translate-y-48"></div> */}
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <SectionHeader tagline={Experiences.tagline} title="Travel Experiences" />
+        <SectionHeader tagline={Experiences.tagline} title={Experiences.title} />
 
         {/* Slider Container */}
         <div className="mb-20 relative">

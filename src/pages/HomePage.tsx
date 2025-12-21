@@ -10,6 +10,7 @@ import EventSection from '../components/EventSection'
 import { useLanguage } from '../context/LanguageContext'
 import { useFetch } from '../hooks/useFetch'
 import LoadingPage from '../components/LoadingPage'
+import ImageSlider from '../components/common/imageslider/ImgSlider'
 // import ServiceSection from '../components/ServiceSection'
 
 
@@ -89,6 +90,9 @@ const HomePage = () => {
       }
 
       {/* <ServiceSection  {...serviceCardData} /> */}
+
+
+
 
     </div>
   )

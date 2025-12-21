@@ -3,6 +3,7 @@ import { HeroBlockType } from '../types/types'
 import HeroImage from './common/HeroImage'
 import ImgHandler from './ImgHandler'
 import {motion} from 'framer-motion'
+import VidHandler from './VidHandler'
 const HeroSection = (block:HeroBlockType) => {
   // console.log("block", block)
   return (
@@ -11,12 +12,21 @@ const HeroSection = (block:HeroBlockType) => {
       <section className="relative h-screen">
         <div className="absolute inset-0">
           {
-            block.heroImg.url && block.heroImg.url.length > 0 && (
-              <ImgHandler 
-                url={block.heroImg.url} 
-                alternativeText={block.heroImg.alternativeText} 
+            block.video ? (
+
+              block.heroVid !=null &&  block.heroVid.url != null && block.heroVid.url.length > 0 && (
+                <VidHandler 
+                url={block.heroVid.url} 
                 className="w-full h-full object-cover" />
-            )
+              ) 
+            ):(
+                block.heroImg != null &&  block.heroImg.url != null && block.heroImg.url.length > 0 && (
+                  <ImgHandler 
+                  url={block.heroImg.url} 
+                  alternativeText={block.heroImg.alternativeText} 
+                  className="w-full h-full object-cover" />
+                )
+              ) 
           }
           {/* Gradient fade from top to bottom */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-white"></div>

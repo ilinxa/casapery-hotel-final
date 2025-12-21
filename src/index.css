@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Embla base styles – add to globals.css or layout CSS */
+.embla {
+  overflow: hidden;
+  padding: 6px 8px; /* Optional: horizontal padding for first/last slide */
+}
+
+.embla__container {
+  display: flex;
+  will-change: transform;
+  margin: 0 -8px; /* Compensate for slide padding if needed */
+}
+
+.embla__slide {
+  /* No overflow hidden here unless you have overflow content */
+}

@@ -71,7 +71,9 @@ export interface HeroCardType {
 export interface HeroBlockType {
   tagLine: string,
   title: string,
-  heroImg: ImgType
+  heroImg?: ImgType
+  heroVid?: ImgType
+  video: boolean,
   herocard?: HeroCardType[]
 
 }
@@ -157,17 +159,19 @@ export interface FeaturesType {
 }
 export interface RoomType {
   category: string;
+  available: number;
+  img360?: ImgType | null;
   description: string;
   features?: FeaturesType[];
   id: number;
-  image: ImgType;
+  image: ImgType[];
   name: string;
   occupancy: string;
   price: string;
   priceUnit: string;
   size: string;
   rating: number;
-  popular?: boolean;   // <-- optional
+  suit?: boolean;   // <-- optional
 }
 
 export interface RoomSectionType {
