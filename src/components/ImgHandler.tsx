@@ -12,7 +12,7 @@ const ImgHandler = ({url, alternativeText, className}: Props ) => {
     // console.log("url", url)
   return (
         <img 
-        src= {url && url.length > 0 ? 
+        src= {url && url.length > 0 ?  
             baseUrl + url : placeholder }
             // `http://localhost:1337${url}` : placeholder }
             alt={`${alternativeText} image`}

@@ -11,7 +11,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   
     const { data: globalData, isLoading, error  } = useFetch<any>(`/global?locale=${lang}`);
     console.log("Global Data in Layout", globalData)
-
+    console.log("footer date:", globalData?.footer)
     if (isLoading) return <LoadingPage message='Loading...'/>;
     // // if (!globalData) return <p>no global data</p>;
     if (error) return <LoadingPage message='there was an error'/>
